@@ -1,0 +1,14 @@
+name: See comment
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  build:
+    name: Comment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo comment
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo ${{ github.event.comment.body }}.
