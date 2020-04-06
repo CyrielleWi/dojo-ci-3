@@ -8,7 +8,7 @@ jobs:
     name: Comment
     runs-on: ubuntu-latest
     steps:
-      - name: Echo comment
+      - name: Echo comment 2
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo ${{ github.event.comment.body }}.
+        run: echo ${{ github.event.comment.body }}
