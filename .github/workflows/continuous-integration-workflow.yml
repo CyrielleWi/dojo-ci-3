@@ -9,6 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo comment 3
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo ${{ github.event.comment.body }}
